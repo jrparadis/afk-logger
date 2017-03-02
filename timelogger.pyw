@@ -5,7 +5,7 @@ import sqlite3
 
 sql = sqlite3.connect('afk.db')
 cur = sql.cursor()
-#should seconds be float or int? not sure if mysql cares or not. 
+#should seconds be float or int? not sure if sqlite3 cares or not. 
 cur.execute('CREATE TABLE IF NOT EXISTS posts(timeleft TEXT, timeback TEXT, seconds TEXT)')
 sql.commit()
 cur.execute('SELECT * FROM posts')
